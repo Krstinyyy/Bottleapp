@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vending Machine Points App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container" id="authContainer">
+    <h2>Sign Up / Log In</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="signUp()">Sign Up</button>
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div class="container hidden" id="appContainer">
+    <h2>Welcome, <span id="userDisplay"></span></h2>
+    <div class="points">Points: <span id="points">0</span></div>
+
+    <button onclick="depositBottle()">Deposit Bottle</button>
+    <button onclick="logout()" style="background:#dc3545;">Logout</button>
+
+    <div class="rewards">
+      <h3>Exchange Points for Rewards:</h3>
+      <button onclick="redeemItem(30, 'Pens & Correction Tape')">30 pts - Pens + Correction Tape</button>
+      <button onclick="redeemItem(15, 'Pencils + Sharpener + Eraser')">15 pts - Pencil Set</button>
+      <button onclick="redeemItem(20, 'Yellow Pad Paper')">20 pts - Yellow Pad</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
